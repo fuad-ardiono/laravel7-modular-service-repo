@@ -50,7 +50,7 @@ class MakeModule extends Command
 $routes_content = "<?php
 use Illuminate\Support\Facades\Route;
 
-Route::resource('".strtolower($module_name)."', '$module_name/Controller');
+Route::resource('".strtolower($module_name)."', '$module_name\Controller');
 ";
 
 			fwrite($route_file, $routes_content);
