@@ -10,7 +10,7 @@
 1. Run `php artisan module:make <module_name>`
 3. Write your own business logic on Service.php dont forget write the contract to make your function is injectable
 4. After write/code,go to your module folder then git init and push your code to repo
-5. Update your submodule
+5. Update your submodule, go to root project and type `git submodule add -f https://github.com/yourRepo app/Module/YourModule`
 6. Finish
 
 **Why modular?**
