@@ -1,0 +1,3 @@
+[submodule "app/Module/Package"]
+	path = app/Module/Package
+	url = https://github.com/fuad-ardiono/laravel7-modular-package
