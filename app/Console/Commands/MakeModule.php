@@ -37,10 +37,14 @@ class MakeModule extends Command
      */
     public function handle()
     {
+    	if(!file_exists(base_path('app/Module'))) {
+			mkdir(base_path('app/Module/'));
+		}
+
     	if(!file_exists(base_path('app/Module/'.$this->argument('module_name')))) {
     		$module_name = $this->argument('module_name');
     		$service_name = strtolower($this->argument('module_name'))."_service";
-			mkdir('app/Module/'.$this->argument('module_name'));
+			mkdir(base_path('app/Module/'.$this->argument('module_name')));
 
 			$route_file = fopen(base_path('app/Module/'.$module_name.'/routes.php'), "w");
 $routes_content = "<?php
@@ -111,6 +115,11 @@ class Controller extends BaseController {
 ";
 			fwrite($controller_file, $controller_content);
 			fclose($controller_file);
+
+			$module_path = base_path('app/Module/'.$module_name);
+			$this->info('Module created, module path : '.$module_path);
+		} else {
+    		$this->info('Module already exists');
 		}
     }
 }
