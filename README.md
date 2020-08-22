@@ -1,3 +1,10 @@
+**How to run?**
+1. Clone this repository
+2. Update git submodule to retrive the module
+3. Set your db on .env
+4. Run `php artisan migrate --seed`
+5. Finish
+
 **How to write modules ?**
 
 1. Run `php artisan module:make <module_name>`
