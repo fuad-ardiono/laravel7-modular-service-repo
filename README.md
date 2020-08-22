@@ -1,9 +1,8 @@
 **How to write modules ?**
 
-1. Create new folder with name of module for example `Auth`
-2. Then make Contract.php, Service.php, Controller.php, routes.php on `Auth` folder
+1. Run `php artisan module:make <module_name>`
 3. Write your own business logic on Service.php dont forget write the contract to make your function is injectable
-4. After write/code,go to ``Auth`` folder then git init and push your code to repo
+4. After write/code,go to your module folder then git init and push your code to repo
 5. Update your submodule
 6. Finish
 
